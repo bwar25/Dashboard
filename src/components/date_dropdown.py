@@ -4,7 +4,8 @@ import pandas as pd
 
 from . import ids
 
-DATA = pd.read_csv('.\data\successful_charges.csv')
+csv_filepath = None
+DATA = pd.read_csv(csv_filepath)
 successful_charges_dates = DATA.Year.values.tolist()
 successful_charges_dates = list(dict.fromkeys(successful_charges_dates))
 
