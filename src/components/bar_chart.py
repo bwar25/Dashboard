@@ -5,7 +5,8 @@ import plotly.express as px
 
 from . import ids
 
-DATA = pd.read_csv('.\data\successful_charges.csv')
+csv_filepath = None
+DATA = pd.read_csv(csv_filepath)
 
 def render(app: Dash) -> html.Div:
     @app.callback(
